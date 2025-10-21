@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Github Sizes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>GIthub Sizes</h1>
+            <p>To determine the FULL size of a PUBLIC GitHub repository in a stopwatch style.</p>
+        </header>
+            <hr color="blue" />
+        <main>
+            <form id="repository">
+                <label for="url">GitHub Repository URL:</label>
+                <input type="url" id="url" name="url" placeholder="https://github.com/torvalds/linux">
+                <button type="submit">Get Size</button>
+            </form>
+            <section id="results">
+                <h2>Final Results</h2>
+                <div class="final-results">
+                    <p id="size">Size:</p>
+                </div>
+            </section>
+            <section id="download">
+                <h2>Optionally download the repo!</h2>
+                <div class="download-repo">
+                    <a id="download-link" href="#" download>Download Repository as ZIP</a>
+                </div>
+            </section>
+        </main>
+            <hr color="blue" />
+        <footer>
+            <p>Created by penne-not-pasta on github.</p>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
