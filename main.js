@@ -41,9 +41,21 @@ function formatSize(sizeInKB) {
 }
 
 // Function to update download link
-function updateDownloadLink(owner, repo) {
-    downloadLink.href = `https://github.com/${owner}/${repo}/archive/refs/heads/main.zip`;
+async function updateDownloadLink(owner, repo) {
+    const branch = await getDefaultBranch(owner, repo);
+
+    downloadLink.href = `https://github.com/${owner}/${repo}/archive/refs/heads/${branch}.zip`;
 }
+
+
+async function getDefaultBranch(owner, repo) {
+    const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+    if (!response.ok) throw new Error("Repository not found");
+    
+    const data = await response.json();
+    return data.default_branch; // usually 'main' or 'master'
+}
+
 
 // Handle form submission
 form.addEventListener('submit', async (e) => {
@@ -69,7 +81,7 @@ form.addEventListener('submit', async (e) => {
         sizeDisplay.textContent = `Size: ${formatSize(size)}`;
         
         // Update download link
-        updateDownloadLink(owner, repo);
+        await updateDownloadLink(owner, repo);
         
     } catch (error) {
         sizeDisplay.textContent = `Size: Error - ${error.message}`;

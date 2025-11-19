@@ -1,8 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+:root {
+    --primary-txt: #526F78;
+    --primary-link: #78525C;
+    --background: #f8f8f8;
+}
 
+body {
+    background-color: var(--background);
+    font-family: monospace;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--primary-txt);
+}
+
+a {
+    color: var(--primary-link);
+}
+
+input {
+    width: 250px;
+    height: 15px;
+    border: none;
+    background-color: lightgrey;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    border: none;
+    background-color: darkcyan;
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
 }
