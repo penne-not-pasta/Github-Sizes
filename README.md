@@ -4,4 +4,5 @@ have you ever worried about the storage on your device while coding? have you ev
 
 A 2-In-1 size checker & downloader! it just checks the size & lets you optionally download it :3
 
-## Have fun with this!
+## Demo:
+
