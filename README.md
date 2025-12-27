@@ -6,3 +6,4 @@ A 2-In-1 size checker & downloader! it just checks the size & lets you optionall
 
 ## Demo:
 
+https://github.com/user-attachments/assets/cf8a8c48-ce0c-4d9d-adf9-bd8305029932
